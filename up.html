@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Updation</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+	background-color: #00FFFF;
+	background-size: 100%;
+	background-position: 500px 100px;
+}
+div.main{
+	width: 400px;
+	margin: 50px auto 0px auto;
+}
+h2{
+	text-align: center;
+	font-style: unset;
+	padding: 10px;
+	font-family: sans-serif;
+}
+div.update{
+        margin-left:50px;
+	background-color: #000000;
+	width: 100%;
+	font-size: 18px;
+	border-radius: 10px;
+	border:1px solid rgba(255,255,255,0.3);
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+	color: #fff;
+}
+form#up{
+	margin:50px;
+}
+label{
+	font-family: sans-serif;
+        margin-left:10px;
+}
+input#mobileno{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#password{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#check_password{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#username{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#email{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#submit{
+width: 200px;
+padding: 7px;
+font-size: 16px;
+font-family: sans-serif;
+font-weight: 600;
+border-radius: 3px;
+background-color: #c0c0c0;
+color: #fff;
+cursor: pointer;
+border:1px, solid rgba(255,255,255,0.3);
+box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+h1 a
+{
+    text-align: right;
+    text-decoration: none;
+    color:black;
+}
+h1 .fa
+{
+    text-align: right;
+    margin: 8px;
+}
+h1
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 32px;
+	text-align:right;
+    color: black;
+    margin-bottom: 8%;
+    font-family: cursive;
+	display:inline;
+	width:32px;
+}
+</style>
+</head>
+<body background="./registerfrom_files/bg.jpg">
+	<h1><a href="home.html"><i class="fa fa-home"></i>Home</a></h1>
+	<h1><a href="custprof.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a></h1>
+	<h1><a href="home.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></h1>
+<div class="main"> 
+<div class="update">
+<h2>Update Profile</h2>
+<form action="up.php" id="register" method="POST">
+	<label>Email :</label>
+	<br>
+	<input type="text" name="email" id="email" placeholder="Enter the Mail Id"  required>
+	<br><br>
+    <label>Username :</label>
+	<br>
+	<input type="text" name="username" id="email" placeholder="Enter the username"  required>
+	<br><br>
+	<label> Change Password </label>
+			<br>
+			<input type="password" name="password" id="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"placeholder="Enter the Password"  required><br >
+      &ensp;&ensp;&ensp;&ensp;<input type="checkbox" onclick="myFunction()">Show Password
+      <div id="message" style="color:white;padding-left:20px">
+			  <p>**Password must contain the following:</p>
+			  <p >A <b>lowercase</b> letter, A <b>capital (uppercase)</b> letter , A <b>number , </b>Minimum <b>8 characters</b></p>
+			</div>
+			<input type="password" name="check_password" id="check_password" placeholder="ReEnter the Password"onkeyup='check();' required>
+			<br><br>
+	<label>Mobileno :</label>
+	<br>
+	<input type="text" name="mobileno" id="mobileno" placeholder="Enter the Mobile no"  required>
+	<br><br>
+	
+				<center>
+	<input type="submit" value="submit" name="submit" id="submit">
+				</center>
+</form>
+</div>	
+</div>
+<script>
+	function myFunction() {
+	  var x = document.getElementById("password");
+	  if (x.type === "password") {
+		x.type = "text";
+	  } else {
+		x.type = "password";
+	  }
+	}
+	var check = function() {
+	  if (document.getElementById('password').value ==
+		document.getElementById('check_password').value) {
+		document.getElementById('message').style.color = 'grey';
+		document.getElementById('message').innerHTML = 'matching';
+	  } else {
+		document.getElementById('message').style.color = 'white';
+		document.getElementById('message').innerHTML = 'not matching';
+	  }
+	}
+  </script>
+  </body>
+  </html>
+  

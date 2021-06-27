@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Entrepreneur Login</title>
+<style>
+body{
+        background: url("13.jpg");
+	background-size: 100%;
+	background-position: 500px 100px;
+}
+div.main{
+	width: 400px;
+	margin: 100px auto 0px auto;
+}
+h2{
+	text-align: center;
+	font-style: unset;
+	padding: 10px;
+	font-family: sans-serif;
+}
+h1 a
+{
+    text-align: left;
+    text-decoration: none;
+    color:white;
+}
+h1 .fa
+{
+    text-align: left;
+    margin: 8px;
+}
+h1
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 32px;
+    color:white;
+    text-align: left;
+    margin-bottom: 8%;
+    font-family: cursive;
+	display: inline;
+}
+div.entreprenuerlogin{
+	background-color: #000000;
+	width: 100%;
+	font-size: 18px;
+	border-radius: 10px;
+	border:1px solid rgba(255,255,255,0.3);
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+	color: #fff;
+        margin-left:30px;
+}
+form#register{
+	margin: 40px;
+}
+label{
+	font-family: sans-serif;
+}
+input#password{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}input#email{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+#button{
+width: 150px;
+padding: 7px;
+font-size: 16px;
+font-family: sans-serif;
+font-weight: 600;
+border-radius: 3px;
+}
+input#register {
+ width: 150px;
+padding: 7px;
+font-size: 16px;
+font-family: sans-serif;
+font-weight: 600;
+border-radius: 3px;
+text-align:center;
+}
+
+</style>
+</head>
+<body>
+<h1><a href="home.html"><i class="fa fa-home"></i>Home</a></h1>
+<h1><a href="eviewshops.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>View Shop</a></h1>
+
+<div class="main">
+	<div class="entreprenuerlogin">
+		<h2>ENTREPRENUER LOGIN</h2>
+		<form id="register" action="entrepreneur.php" method="post">
+                        <center>
+			<label>Email :</label>
+			<br>
+			<input type="email" name="email" id="email" placeholder="Enter the Mail Id" required>
+			<br><br>
+			<label>Password :</label>
+			<br>
+			<input type="password" name="password" id="password" placeholder="Enter the Password"  pattern=".{6,}" required>
+			<br><br>
+                        </center>
+                        <center>
+                        <button type="submit">Login</button>
+                        <button type="submit" formaction="entrepreneurregister.html" onclick="register()">Register</button>
+                        </a>
+                        </center>
+                </form>
+</div>
+<script>
+	function register(){
+		window.open("entrepreneurregister.html","_self");
+	}
+</script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="freebot"
+  agent-id="a58f6db3-2a78-4e11-8ad7-98d5c76e3dac"
+  language-code="en"
+></df-messenger>
+</body>
+</html>

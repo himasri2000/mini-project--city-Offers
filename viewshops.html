@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Selection</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+	background-image:url("13.jpg");
+	background-size: 100%;
+	background-position: 500px 100px;
+}
+div.main{
+	width: 400px;
+	margin: 100px auto 0px auto;
+}
+h2{
+	text-align: center;
+	font-style: unset;
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+form#cviewshops{
+	margin: 40px;
+}
+label{
+	font-family: sans-serif;
+        padding-left:40px;
+}
+input#category{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#city{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+
+}input#fromdate{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#city{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#todate{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#offers{
+	width: 300px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        margin-left:10px;
+}
+input#submit{
+width: 200px;
+padding: 7px;
+font-size: 16px;
+font-family: sans-serif;
+font-weight: 600;
+border-radius: 3px;
+background-color: #c0c0c0;
+color: #fff;
+cursor: pointer;
+border:1px, solid rgba(255,255,255,0.3);
+box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+h1 a
+{
+    text-align: right;
+    text-decoration: none;
+    color:white;
+}
+h1 .fa
+{
+    text-align: right;
+    margin: 8px;
+}
+h1
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 32px;
+	text-align:right;
+    color: lightslategray;
+    margin-bottom: 8%;
+    font-family: cursive;
+	display:inline;
+	width:32px;
+}
+</style>
+</head>
+<body background="./registerfrom_files/bg.jpg">
+	<h1><a href="home.html"><i class="fa fa-home"></i>Home</a></h1>
+	<h1><a href="customer.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a></h1>
+	<h1><a href="home.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></h1>
+<div class="main"> 
+<h2>View Shops</h2>
+<form action="cviewshops.php" id="cviewshops" method="post">
+<label>City :</label>
+<br>
+<input type="text" name="city" id="city" placeholder="Enter the city"  required>
+<br><br>
+<label>Category :</label>
+<br>
+<input type="text" name="category" id="category" placeholder="Enter the category"  required>
+<br><br>
+<center>
+<input type="submit" value="submit" name="submit" id="submit">
+</center>
+</form>	
+</div>
+</body>
+</html>
